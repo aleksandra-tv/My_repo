@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Форма обратной связи - Картинная галерея</title>
+</head>
+<body>
+    <header>
+        <a href="index.html">
+            <img src="https://uploads.turbologo.ru/uploads/design/preview_image/2973807/preview_image20210205-2458-1m4rapj.png" alt="Логотип картинной галереи" width="150" height="50">
+        </a>
+        <nav>
+            <ul>
+                <li><a href="about.html">О нас</a></li>
+                <li><a href="form.html">Форма обратной связи</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h1>Оформление визита в галерею</h1>
+            <p>Заполните форму ниже для записи на экскурсию</p>
+        </section>
+
+        <section>
+            <form action="#" method="post">
+                <fieldset>
+                    <legend>Личные данные</legend>
+
+                    <p>
+                        <label for="fullname">ФИО визитера:</label><br>
+                        <input type="text" id="fullname" name="fullname" placeholder="Иванов Иван Иванович" required>
+                    </p>
+
+                    <p>
+                        <label for="phone">Телефон:</label><br>
+                        <input type="text" id="phone" name="phone" placeholder="89998756395" required>
+                    </p>
+
+                    <p>
+                        <label for="email">Адрес электронной почты:</label><br>
+                        <input type="text" id="email" placeholder="example@mail.com" required>
+                    </p>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Выбор экспозиций</legend>
+                    <p>Экспозиции к посещению:</p>
+
+                    <p>
+                        <input type="checkbox" id="exp1" name="exposition" value="impressionism">
+                        <label for="exp1">Шедевры импрессионизма</label><br>
+                        <input type="checkbox" id="exp2" name="exposition" value="renaissance">
+                        <label for="exp2">Эпоха Возрождения</label><br>
+                        <input type="checkbox" id="exp3" name="exposition" value="modern">
+                        <label for="exp3">Искусство модерна</label><br>
+                        <input type="checkbox" id="exp4" name="exposition" value="baroque">
+                        <label for="exp4">Искусство барокко</label><br>
+                        <input type="checkbox" id="exp5" name="exposition" value="classicism">
+                        <label for="exp5">Классицизм</label><br>
+                        <input type="checkbox" id="exp6" name="exposition" value="realism">
+                        <label for="exp6">Русский реализм</label><br>
+                    </p>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Выбор экскурсии</legend>
+                    <p>Вид экскурсии:</p>
+
+                    <p>
+                        <input type="radio" id="guide" name="tourType" value="guide" required>
+                        <label for="guide">Экскурсовод</label><br>
+                        <input type="radio" id="audio" name="tourType" value="audio">
+                        <label for="audio">Аудио-гид</label><br>
+                        <input type="radio" id="self" name="tourType" value="self">
+                        <label for="self">Самостоятельный просмотр</label>
+                    </p>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Дата посещения</legend>
+                    <p>
+                        <label for="visitDay">День посещения:</label><br>
+                        <select name="visitDay" id="visitDay" required>
+                            <option value="">Выберите день</option>
+                            <option value="monday">Понедельник</option>
+                            <option value="wednesday">Среда</option>
+                            <option value="friday">Пятница</option>
+                        </select>
+                    </p>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Дополнительная информация</legend>
+                    <p>
+                        <label for="additional">Дополнительная информация:</label><br>
+
+                        <textarea name="additional" id="additional" rows="5" cols="5" wrap="soft" placeholder="Укажите дополнительные пожелания..."></textarea>
+                    </p>
+                </fieldset>
+
+                <p>
+                    <input type="submit" value="Оформить визит">
+                    <input type="reset" value="Очистить форму">
+                </p>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <a href="https://miet.ru" target="_blank">
+            <img src="https://miet.ru/img/logo.svg" alt="Логотип НИУ МИЭТ" width="100" height="50">
+        </a>
+        <ul>
+            <li><a href="about.html">О нас</a></li>
+            <li><a href="form.html">Форма обратной связи</a></li>
+        </ul>
+    </footer>
+    
+</body>
+</html>
