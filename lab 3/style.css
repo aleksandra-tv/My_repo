@@ -1,0 +1,470 @@
+/* Основные стили сайта */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: lightgray;
+    color: black;
+}
+
+/* Стили для header */
+.site-header {
+    background-color: navy;
+    padding: 20px;
+    border-bottom: 3px solid red;
+    
+    /* Flexbox для header */
+    display: flex;
+    justify-content: space-between; /* Логотип и навигация по противоположным сторонам */
+    align-items: center; /* Выравнивание по вертикали */
+    flex-wrap: wrap; /* На случай маленького экрана */
+}
+
+.logo-link {
+    display: inline-block;
+}
+
+.logo-img {
+    width: 150px;
+    height: 50px;
+}
+
+/* Навигация */
+.main-nav ul {
+    list-style: none;
+    
+    /* Flexbox для навигации */
+    display: flex;
+    gap: 20px; /* Расстояние между ссылками */
+    flex-wrap: wrap; /* Перенос на маленьком экране */
+}
+
+.main-nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 15px;
+}
+
+/* Псевдоклассы для ссылок */
+.main-nav a:link {
+    color: white;
+}
+
+.main-nav a:visited {
+    color: lightgray;
+}
+
+.main-nav a:hover {
+    background-color: red;
+    color: white;
+}
+
+.main-nav a:active {
+    background-color: darkred;
+    color: white;
+}
+
+/* Основной контент */
+.main-content {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.section-title {
+    color: navy;
+    margin-bottom: 30px;
+    border-bottom: 2px solid red;
+    padding-bottom: 10px;
+}
+
+/* Карточки экспозиций */
+.expositions-grid {
+    /* Flexbox для карточек */
+    display: flex;
+    flex-wrap: wrap; /* Перенос карточек на следующую строку */
+    gap: 30px;
+    justify-content: center;
+}
+
+.exposition-card {
+    /* Минимальная и максимальная ширина */
+    min-width: 280px;
+    max-width: 350px;
+    flex: 1 1 300px; /* flex-grow: 1, flex-shrink: 1, flex-basis: 300px */
+    
+    background-color: white;
+    border: 1px solid gray;
+    
+    /* Для корректного отображения контента */
+    display: flex;
+    flex-direction: column;
+}
+
+.exposition-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover; /* Чтобы изображение не искажалось */
+}
+
+.card-caption {
+    padding: 20px;
+    
+    /* Для корректного отображения контента */
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.card-caption h3 {
+    color: navy;
+    margin-bottom: 10px;
+}
+
+.card-caption p {
+    color: black;
+    margin-bottom: 15px;
+    flex-grow: 1; /* Чтобы текст занимал доступное пространство */
+}
+
+/* Стили для ссылок в карточках */
+.card-link {
+    display: inline-block;
+    color: red;
+    text-decoration: none;
+    font-weight: bold;
+    align-self: flex-start; /* Выравнивание по левому краю */
+}
+
+.card-link:link {
+    color: red;
+}
+
+.card-link:visited {
+    color: purple;
+}
+
+.card-link:hover {
+    color: navy;
+    text-decoration: underline;
+}
+
+.card-link:active {
+    color: darkblue;
+}
+
+/* Стили для таблиц */
+.table-container {
+    margin: 30px 0;
+    overflow-x: auto; /* Горизонтальная прокрутка для маленьких экранов */
+}
+
+.paintings-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 600px; /* Минимальная ширина таблицы */
+}
+
+/* Заголовочные строки и столбцы */
+.paintings-table th {
+    background-color: navy;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    padding: 12px;
+    border: 2px double red;
+}
+
+/* Внутренние ячейки */
+.paintings-table td {
+    background-color: white;
+    color: black;
+    padding: 10px;
+    border: 1px solid gray;
+}
+
+/* Чередование цветов строк */
+.paintings-table tr:nth-child(even) td {
+    background-color: lightgray;
+}
+
+/* Стили для ячеек с изображениями */
+.paintings-table td img {
+    width: 100px;
+    height: 70px;
+    object-fit: cover;
+}
+
+/* Стили для форм */
+.form-container {
+    max-width: 600px;
+    margin: 30px auto;
+    background-color: white;
+    padding: 30px;
+    border: 1px solid gray;
+}
+
+.form-title {
+    color: navy;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.form-description {
+    text-align: center;
+    color: black;
+    margin-bottom: 30px;
+}
+
+/* Flexbox для формы */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Отступы между блоками */
+}
+
+.form-section {
+    padding: 20px;
+    border: 1px solid gray;
+    
+    /* Flexbox для секций формы */
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Отступы между элементами внутри секции */
+}
+
+.form-section legend {
+    color: navy;
+    font-weight: bold;
+    padding: 0 10px;
+}
+
+.form-group {
+    /* Flexbox для группы с лейблом и инпутом */
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.form-group label {
+    color: black;
+    font-weight: bold;
+}
+
+/* Единый размер для полей ввода */
+.form-group input[type="text"],
+.form-group input[type="tel"],
+.form-group input[type="email"],
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid gray;
+    font-size: 16px;
+}
+
+.form-group input[type="text"]:focus,
+.form-group input[type="tel"]:focus,
+.form-group input[type="email"]:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: red;
+}
+
+/* Стили для чекбоксов и радио */
+.checkbox-group,
+.radio-group {
+    /* Flexbox для групп чекбоксов */
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.checkbox-group label,
+.radio-group label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: normal;
+}
+
+/* Кнопки */
+.button-group {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+    
+    /* Выравнивание кнопок по правому краю */
+    justify-content: flex-end;
+}
+
+.btn {
+    padding: 12px 24px;
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    
+    /* Для align-self */
+    align-self: flex-end;
+}
+
+.btn-submit {
+    background-color: navy;
+    color: white;
+}
+
+.btn-submit:hover {
+    background-color: red;
+}
+
+.btn-reset {
+    background-color: gray;
+    color: white;
+}
+
+.btn-reset:hover {
+    background-color: darkgray;
+}
+
+/* Стили для футера */
+.site-footer {
+    background-color: navy;
+    padding: 30px 20px;
+    margin-top: 50px;
+    border-top: 3px solid red;
+    
+    /* Flexbox для футера (как в header) */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    
+    /* Flexbox для содержимого футера */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 100%;
+}
+
+.footer-logo {
+    width: 100px;
+    height: 50px;
+}
+
+.footer-nav ul {
+    list-style: none;
+    
+    /* Flexbox для навигации в футере */
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.footer-nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.footer-nav a:link {
+    color: white;
+}
+
+.footer-nav a:visited {
+    color: lightgray;
+}
+
+.footer-nav a:hover {
+    color: red;
+    text-decoration: underline;
+}
+
+.footer-nav a:active {
+    color: darkred;
+}
+
+/* Стили для страницы "О нас" */
+.about-section {
+    background-color: white;
+    padding: 30px;
+    border: 1px solid gray;
+}
+
+.info-table {
+    width: 100%;
+    margin: 20px 0;
+    border-collapse: collapse;
+    overflow-x: auto;
+}
+
+.info-table td {
+    padding: 12px;
+    border: 1px solid gray;
+}
+
+.info-table td:first-child {
+    background-color: navy;
+    color: white;
+    font-weight: bold;
+}
+
+.info-table td:last-child {
+    background-color: white;
+    color: black;
+}
+
+.benefits-list {
+    list-style: none;
+    padding: 0;
+}
+
+.benefits-list li {
+    padding: 8px 0;
+    padding-left: 25px;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .site-header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .main-nav ul {
+        justify-content: center;
+    }
+    
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+    }
+    
+    .footer-nav ul {
+        justify-content: center;
+    }
+    
+    .button-group {
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .btn {
+        width: 100%;
+    }
+}
