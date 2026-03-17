@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Форма обратной связи - Картинная галерея</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="site-header">
+        <a href="index.html" class="logo-link">
+            <img src="https://uploads.turbologo.ru/uploads/design/preview_image/2973807/preview_image20210205-2458-1m4rapj.png" alt="Логотип картинной галереи" class="logo-img">
+        </a>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="about.html">О нас</a></li>
+                <li><a href="form.html">Форма обратной связи</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <div class="form-container">
+            <h1 class="form-title">Оформление визита в галерею</h1>
+            <p class="form-description">Заполните форму ниже для записи на экскурсию</p>
+
+            <form id="visitForm" action="#" method="post">
+                <fieldset class="form-section">
+                    <legend>Личные данные</legend>
+
+                    <div class="form-group">
+                        <label for="fullname">ФИО визитера:</label>
+                        <input type="text" id="fullname" name="fullname" placeholder="Иванов Иван Иванович" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Телефон:</label>
+                        <input type="tel" id="phone" name="phone" placeholder="+7(999)123-45-67" required>
+                        <small class="input-hint">Формат: +7(XXX)XXX-XX-XX</small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Адрес электронной почты:</label>
+                        <input type="email" id="email" name="email" placeholder="example@mail.com" required>
+                    </div>
+                </fieldset>
+
+                <fieldset class="form-section">
+                    <legend>Выбор экспозиций</legend>
+                    <p>Экспозиции к посещению:</p>
+
+                    <div class="checkbox-group">
+                        <label>
+                            <input type="checkbox" name="exposition" value="impressionism">
+                            Шедевры импрессионизма
+                        </label>
+                        <label>
+                            <input type="checkbox" name="exposition" value="renaissance">
+                            Эпоха Возрождения
+                        </label>
+                        <label>
+                            <input type="checkbox" name="exposition" value="modern">
+                            Искусство модерна
+                        </label>
+                        <label>
+                            <input type="checkbox" name="exposition" value="baroque">
+                            Искусство барокко
+                        </label>
+                        <label>
+                            <input type="checkbox" name="exposition" value="classicism">
+                            Классицизм
+                        </label>
+                        <label>
+                            <input type="checkbox" name="exposition" value="realism">
+                            Русский реализм
+                        </label>
+                    </div>
+                </fieldset>
+
+                <fieldset class="form-section">
+                    <legend>Выбор экскурсии</legend>
+                    <p>Вид экскурсии:</p>
+
+                    <div class="radio-group">
+                        <label>
+                            <input type="radio" name="tourType" value="guide" required>
+                            Экскурсовод
+                        </label>
+                        <label>
+                            <input type="radio" name="tourType" value="audio">
+                            Аудио-гид
+                        </label>
+                        <label>
+                            <input type="radio" name="tourType" value="self">
+                            Самостоятельный просмотр
+                        </label>
+                    </div>
+                </fieldset>
+
+                <fieldset class="form-section">
+                    <legend>Дата посещения</legend>
+                    <div class="form-group">
+                        <label for="visitDay">День посещения:</label>
+                        <select name="visitDay" id="visitDay" required>
+                            <option value="">Выберите день</option>
+                            <option value="Понедельник">Понедельник</option>
+                            <option value="Среда">Среда</option>
+                            <option value="Пятница">Пятница</option>
+                        </select>
+                    </div>
+                </fieldset>
+
+                <fieldset class="form-section">
+                    <legend>Дополнительная информация</legend>
+                    <div class="form-group">
+                        <label for="additional">Дополнительная информация:</label>
+                        <textarea name="additional" id="additional" rows="5" placeholder="Укажите дополнительные пожелания..."></textarea>
+                    </div>
+                </fieldset>
+
+                <div class="button-group">
+                    <button type="submit" class="btn btn-submit">Оформить визит</button>
+                    <button type="reset" class="btn btn-reset">Очистить форму</button>
+                </div>
+            </form>
+        </div>
+
+        <!-- Контейнер для карточек с данными -->
+        <div class="submissions-container">
+            <h2 class="section-title">Оформленные визиты</h2>
+            <div id="submissionsGrid" class="submissions-grid">
+                <!-- Сюда будут добавляться карточки с данными из формы -->
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <a href="https://miet.ru" target="_blank" class="footer-logo-link">
+                <img src="https://miet.ru/img/logo.svg" alt="Логотип НИУ МИЭТ" class="footer-logo">
+            </a>
+            <nav class="footer-nav">
+                <ul>
+                    <li><a href="about.html">О нас</a></li>
+                    <li><a href="form.html">Форма обратной связи</a></li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
